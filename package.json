@@ -1,26 +1,42 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "dependencies": {
-    "eslint": "^9.9.0",
-    "nuxt": "^3.12.4",
-    "typescript": "^5.5.4",
-    "vue": "latest"
-  },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
-  "devDependencies": {
-    "@nuxt/eslint-config": "^0.5.1",
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.41",
-    "prettier": "3.3.3",
-    "tailwindcss": "^3.4.10"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "lint:js": "eslint .",
+        "lint:prettier": "prettier --check .",
+        "lint": "npm run lint:js && yarn lint:prettier",
+        "lintfix": "npm run format && yarn lint:js --fix",
+        "format": "prettier --write --list-different ."
+    },
+    "devDependencies": {
+        "@headlessui/vue": "^1.7.22",
+        "@nuxt/eslint-config": "^0.3.13",
+        "@pinia/nuxt": "^0.5.1",
+        "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+        "@typescript-eslint/parser": "^7.4.0",
+        "@vue/test-utils": "^2.4.5",
+        "autoprefixer": "^10.4.19",
+        "eslint": "^9.5.0",
+        "jsdom": "^24.0.0",
+        "nuxt": "^3.11.1",
+        "pinia": "^2.1.7",
+        "postcss": "^8.4.38",
+        "prettier": "^3.2.5",
+        "prettier-plugin-organize-attributes": "^1.0.0",
+        "prettier-plugin-tailwindcss": "^0.5.13",
+        "tailwindcss": "^3.4.3",
+        "typescript": "^5.4.3",
+        "vitest": "^1.4.0",
+        "vue": "^3.4.21",
+        "vue-router": "^4.3.0"
+    },
+    "dependencies": {
+        "add": "^2.0.6",
+        "module": "^1.2.5"
+    }
 }
